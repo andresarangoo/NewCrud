@@ -8,10 +8,10 @@ const getProducts = async() => {
     const products = await Product.findAll();
     const productsFormatted = products.map (product => {
         return {
-            productID = product.product_id,
-            productName = product.product_name,
-            productPhoto = product.product_photo,
-            productPrice = produduct.product_price
+            productID: product.product_id,
+            productName: product.product_name,
+            productPhoto: product.product_photo,
+            productPrice: produduct.product_price
         }
     });
     return productsFormatted;
@@ -21,9 +21,9 @@ const getProductById = async(id) => {
     const product = await Product.findByPK(id)
     if(!product) return null;
     const productFormatted = {
-            productName = product.product_name,
-            productPhoto = product.product_photo,
-            productPrice = produduct.product_price
+            productName: product.product_name,
+            productPhoto: product.product_photo,
+            productPrice: produduct.product_price
         };
     return productFormatted;
 };
@@ -31,14 +31,14 @@ const getProductById = async(id) => {
 const createProduct = async(body) => {
     const {productName, productPhoto, productPrice} = body;
     const newProduct = await Product.create({
-        product_name = productName,
-        product_photo = productPhoto,
-        product_price = productPrice
+        product_name: productName,
+        product_photo: productPhoto,
+        product_price: productPrice
     });
     const productFormatted = {
-        productName = newProduct.product_name,
-        productPhoto = newProduct.product_photo,
-        productPrice = newProduct.product_price
+        productName: newProduct.product_name,
+        productPhoto: newProduct.product_photo,
+        productPrice: newProduct.product_price
     };
     return productFormatted;
 };
@@ -46,9 +46,9 @@ const createProduct = async(body) => {
 const updateProduct = async(product_id, body) => {
     const {productName, productPhoto, productPrice} = body;
     const newDataProduct = {
-        product_name = productName,
-        product_photo = productPhoto,
-        product_price = productPrice
+        product_name: productName,
+        product_photo: productPhoto,
+        product_price: productPrice
     }
     const [updatedRow] = await Product.update({...newDataProduct}, {where: {product_id}});
     return updatedRow;

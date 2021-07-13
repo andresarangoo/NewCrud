@@ -12,7 +12,7 @@ const server = (app) => {
     app.use('/', routes);
 
     app.get('/', (req,res) => {
-        res.send('<h1>Productos</h1>')
+        res.send('<h1>Funciona!</h1>')
     });
 };
 
