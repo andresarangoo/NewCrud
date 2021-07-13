@@ -18,7 +18,7 @@ const getProducts = async() => {
 };
 
 const getProductById = async(id) => {
-    const product = await Product.findByPK(id)
+    const product = await Product.findByPK(id);
     if(!product) return null;
     const productFormatted = {
             productName: product.product_name,
