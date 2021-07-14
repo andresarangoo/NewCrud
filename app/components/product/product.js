@@ -9,9 +9,10 @@ const getProducts = async() => {
     const productsFormatted = products.map (product => {
         return {
             productID: product.product_id,
+            productHref: product.product_href,
             productName: product.product_name,
             productPhoto: product.product_photo,
-            productPrice: produduct.product_price
+            productPrice: product.product_price
         }
     });
     return productsFormatted;
@@ -22,21 +23,24 @@ const getProductById = async(id) => {
     if(!product) return null;
     const productFormatted = {
             productName: product.product_name,
+            productHref: product.product_href,
             productPhoto: product.product_photo,
-            productPrice: produduct.product_price
+            productPrice: product.product_price
         };
     return productFormatted;
 };
 
 const createProduct = async(body) => {
-    const {productName, productPhoto, productPrice} = body;
+    const {productName, productHref, productPhoto, productPrice} = body;
     const newProduct = await Product.create({
         product_name: productName,
+        product_href: productHref,
         product_photo: productPhoto,
         product_price: productPrice
     });
     const productFormatted = {
         productName: newProduct.product_name,
+        productHref: newProduct.product_href,
         productPhoto: newProduct.product_photo,
         productPrice: newProduct.product_price
     };
@@ -44,9 +48,10 @@ const createProduct = async(body) => {
 };
 
 const updateProduct = async(product_id, body) => {
-    const {productName, productPhoto, productPrice} = body;
+    const {productName, productHref, productPhoto, productPrice} = body;
     const newDataProduct = {
         product_name: productName,
+        product_href: productHref,
         product_photo: productPhoto,
         product_price: productPrice
     }

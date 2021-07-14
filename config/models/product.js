@@ -10,6 +10,11 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
+
+        product_href:{
+            type: DataTypes.STRING(250),
+            allowNull: false
+        },
         
         product_name: {
             type: DataTypes.STRING(250),
