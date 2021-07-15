@@ -1,6 +1,5 @@
 const db = require('../../../config/sequelize');
 let Product = require('../../../config/models/product');
-const { where } = require('sequelize/types');
 
 Product = Product(db.sequelize, db.Sequelize);
 
@@ -19,11 +18,11 @@ const getProducts = async() => {
 };
 
 const getProductById = async(id) => {
-    const product = await Product.findByPK(id);
+    const product = await Product.findByPk(id);
     if(!product) return null;
     const productFormatted = {
-            productName: product.product_name,
             productHref: product.product_href,
+            productName: product.product_name,
             productPhoto: product.product_photo,
             productPrice: product.product_price
         };
@@ -33,14 +32,14 @@ const getProductById = async(id) => {
 const createProduct = async(body) => {
     const {productName, productHref, productPhoto, productPrice} = body;
     const newProduct = await Product.create({
-        product_name: productName,
         product_href: productHref,
+        product_name: productName,
         product_photo: productPhoto,
         product_price: productPrice
     });
     const productFormatted = {
-        productName: newProduct.product_name,
         productHref: newProduct.product_href,
+        productName: newProduct.product_name,
         productPhoto: newProduct.product_photo,
         productPrice: newProduct.product_price
     };
@@ -50,8 +49,8 @@ const createProduct = async(body) => {
 const updateProduct = async(product_id, body) => {
     const {productName, productHref, productPhoto, productPrice} = body;
     const newDataProduct = {
-        product_name: productName,
         product_href: productHref,
+        product_name: productName,
         product_photo: productPhoto,
         product_price: productPrice
     }
