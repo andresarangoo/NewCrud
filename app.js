@@ -1,5 +1,5 @@
 const server = require ('./config/server');
-const express = require('express'); //Importamos express para ayudarnos en la app
+const express = require('express'); 
 const app = express();
 
 server(app);

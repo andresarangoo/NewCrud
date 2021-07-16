@@ -1,6 +1,5 @@
 const httpStatus = require('http-status');
 const Product = require('./product');
-const component = 'Product';
 
 const getProducts = async(req,res) => {
     try {
