@@ -21,6 +21,7 @@ const getProductById = async(id) => {
     const product = await Product.findByPk(id);
     if(!product) return null;
     const productFormatted = {
+            productId: product.product_id,
             productHref: product.product_href,
             productName: product.product_name,
             productPhoto: product.product_photo,

@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
 
         product_photo: {
             type: DataTypes.STRING(250),
-            allowNull: false 
+            allowNull: true 
         }, 
 
         product_price: {
