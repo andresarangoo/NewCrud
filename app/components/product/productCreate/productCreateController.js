@@ -3,7 +3,7 @@ const Product = require('./productCreate');
 
 const createProduct = async(req,res) => {
     const {productHref, productName, productCategory, productDescription, productPhoto, productPrice} = req.body;
-    if(!productHref || !productName || productCategory || productDescription || !productPhoto || !productPrice){
+    if(!productHref || !productName || !productCategory || !productDescription || !productPhoto || !productPrice){
         return res
             .status(httpStatus.BAD_REQUEST)
             .send({message: 'Información incompleta'})

@@ -4,10 +4,12 @@ let Product = require('../../../../config/models/product');
 Product = Product(db.sequelize, db.Sequelize);
 
 const updateProduct = async(product_id, body) => {
-    const {productName, productHref, productPhoto, productPrice} = body;
+    const {productName, productHref, productCategory, productDescription, productPhoto, productPrice} = body;
     const newDataProduct = {
         product_href: productHref,
         product_name: productName,
+        product_category: productCategory,
+        product_description: productDescription,
         product_photo: productPhoto,
         product_price: productPrice
     }
