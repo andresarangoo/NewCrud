@@ -1,4 +1,4 @@
-const {Router} = require ('express');
+const {Router} = require('express');
 const controllerUpdate = require('./productUpdateController');
 
 const routerUpdate = new Router();
