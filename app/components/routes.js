@@ -1,8 +1,18 @@
 const {Router} = require('express');
 const router = new Router();
+const productsCreate = require('./product/productCreate/productCreateRouter');
+const productsDelete = require('./product/productDelete/productDeleteRouter');
+const productsGetAll = require('./product/productGetAll/productGetAllRouter');
+const productsGetByPk = require('./product/productGetByPk/productGetByPkRouter');
+const productsGetByCategory = require('./product/productGetByCategory');
+const productsUpdate = require('./product/productUpdate/productUpdateRouter');
 
-const products = require('./product/productRoute');
+router.use('/products', productsCreate);
+router.use('/products', productsDelete);
+router.use('/products', productsGetAll);
+router.use('/products', productsGetByPk);
+router.use('/products', productsGetByCategory);
+router.use('/products', productsUpdate);
 
-router.use('/products', products);
 
 module.exports = router;
