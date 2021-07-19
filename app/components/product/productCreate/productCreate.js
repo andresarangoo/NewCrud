@@ -1,6 +1,8 @@
 const db = require('../../../../config/sequelize');
 let Product = require('../../../../config/models/product');
 
+Product = Product(db.sequelize, db.Sequelize);
+
 const createProduct = async(body) => {
     const {productHref, productName, productCategory, productDescription, productPhoto, productPrice} = body;
     const newProduct = await Product.create({
