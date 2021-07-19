@@ -8,4 +8,4 @@ const deleteProduct = async (product_id) => {
     return deleteRow;
 };
 
-module.exports = deleteProduct;
+module.exports = {deleteProduct};

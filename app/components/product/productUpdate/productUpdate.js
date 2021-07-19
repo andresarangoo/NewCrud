@@ -15,4 +15,4 @@ const updateProduct = async(product_id, body) => {
     return updatedRow;
 };
 
-module.exports = updateProduct;
+module.exports = {updateProduct};

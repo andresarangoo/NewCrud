@@ -14,4 +14,4 @@ const getProducts = async(req,res) => {
     }
 };
 
-module.exports = getProducts;
+module.exports = {getProducts};

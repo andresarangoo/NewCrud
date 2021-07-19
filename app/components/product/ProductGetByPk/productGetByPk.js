@@ -18,4 +18,4 @@ const getProductById = async(id) => {
     return productFormatted;
 };
 
-module.exports = getProductById;
+module.exports = {getProductById};

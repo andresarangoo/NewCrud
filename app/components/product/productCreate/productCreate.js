@@ -24,4 +24,4 @@ const createProduct = async(body) => {
     return productFormatted;
 };
 
-module.exports = createProduct;
+module.exports = {createProduct};

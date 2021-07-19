@@ -22,4 +22,4 @@ const updateProduct = async(req,res) => {
     }
 };
 
-module.exports = updateProduct;
+module.exports = {updateProduct};

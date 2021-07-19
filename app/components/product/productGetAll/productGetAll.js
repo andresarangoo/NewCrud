@@ -19,4 +19,4 @@ const getProducts = async() => {
     return productsFormatted;
 };
 
-module.exports = getProducts;
+module.exports = {getProducts};
