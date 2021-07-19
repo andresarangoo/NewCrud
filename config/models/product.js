@@ -20,6 +20,16 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
 
+        product_category: {
+            type: DataTypes.STRING(250),
+            allowNull: false
+        },
+
+        product_description: {
+            type: DataTypes.STRING(250),
+            allowNull: false
+        },
+
         product_photo: {
             type: DataTypes.STRING(250),
             allowNull: true 
