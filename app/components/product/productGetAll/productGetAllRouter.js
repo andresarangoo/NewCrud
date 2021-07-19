@@ -1,5 +1,5 @@
 const {Router} = require ('express');
-const controllerGetAll = require ('./productController');
+const controllerGetAll = require ('./productGetAllControler');
 
 const routerDelete = new Router();
 
