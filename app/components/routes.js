@@ -10,8 +10,8 @@ const productsUpdate = require('./product/productUpdate/productUpdateRouter');
 router.use('/products', productsCreate);
 router.use('/products', productsDelete);
 router.use('/products', productsGetAll);
-router.use('/products', productsGetByPk);
-//router.use('/products', productsGetByCategory);
+router.use('/product', productsGetByPk);
+router.use('/products', productsGetByCategory);
 router.use('/products', productsUpdate);
 
 
