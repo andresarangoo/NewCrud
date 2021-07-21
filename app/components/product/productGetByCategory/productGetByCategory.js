@@ -24,7 +24,7 @@ const getByCategory = async(category) => {
             productPrice: product.product_price
         }
     });
-    return {productsFormatted, count};
+    return productsFormatted;
 }
 
 module.exports = {getByCategory};
