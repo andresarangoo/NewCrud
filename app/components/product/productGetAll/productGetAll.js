@@ -13,7 +13,8 @@ const getProducts = async() => {
             productCategory: product.product_category,
             productDescription: product.product_description,
             productPhoto: product.product_photo,
-            productPrice: product.product_price
+            productPrice: product.product_price,
+            productAmount: product.product_amount
         }
     });
     return productsFormatted;
