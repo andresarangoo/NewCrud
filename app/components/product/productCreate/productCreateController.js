@@ -2,8 +2,8 @@ const httpStatus = require('http-status');
 const Product = require('./productCreate');
 
 const createProduct = async(req,res) => {
-    const {productHref, productName, productCategory, productDescription, productPhoto, productPrice} = req.body;
-    if(!productHref || !productName || !productCategory || !productDescription || !productPhoto || !productPrice){
+    const {productHref, productName, productCategory, productDescription, productPhoto, productPrice, productAmount} = req.body;
+    if(!productHref || !productName || !productCategory || !productDescription || !productPhoto || !productPrice || !productAmount){
         return res
             .status(httpStatus.BAD_REQUEST)
             .send({message: 'Información incompleta'})
