@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('../app/components/routes');
-const port = process.env.PORT || 3000;
+const port = process.env.RUN || 3000;
 
 const server = (app) => {
     app.disable('x-powered-by');
