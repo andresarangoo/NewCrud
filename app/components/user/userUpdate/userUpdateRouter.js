@@ -1,9 +1,9 @@
 const {Router} = require('express');
-const controllerUpdate = require('./productUpdateController');
+const controllerUpdate = require('./userUpdateController');
 
 const routerUpdate = new Router();
 
 routerUpdate.route('/:id')
-    .put(controllerUpdate.updateProduct);
+    .put(controllerUpdate.updateUser);
 
 module.exports = routerUpdate;

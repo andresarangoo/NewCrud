@@ -1,12 +1,12 @@
 const httpStatus = require('http-status');
-const Product = require('./productUpdate');
+const User = require('./userUpdate');
 
-const updateProduct = async(req,res) => {
+const updateUser = async(req,res) => {
     const {id} = req.params;
     const {body} = req;
     try {
-        const productWasUpdate = await Product.updateProduct(id, body);
-        if (productWasUpdate){
+        const userWasUpdate = await User.updateUser(id, body);
+        if (userWasUpdate){
             return res
                 .status(httpStatus.OK)
                 .send({message: 'Se actualizo'});
@@ -22,4 +22,4 @@ const updateProduct = async(req,res) => {
     }
 };
 
-module.exports = {updateProduct};
+module.exports = {updateUser};

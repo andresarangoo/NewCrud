@@ -10,6 +10,7 @@ const productsUpdate = require('./product/productUpdate/productUpdateRouter');
 const userCreate = require('./user/userCreate/userCreateRouter');
 const userGetAll = require('./user/userGetAll/userGetAllRouter');
 const userGetByPk = require('./user/userGetByPk/userGetByPkRouter');
+const userUpdate = require('./user/userUpdate/userUpdateRouter');
 
 router.use('/products', productsCreate);
 router.use('/products', productsDelete);
@@ -21,6 +22,7 @@ router.use('/products', productsUpdate);
 router.use('/user', userCreate);
 router.use('/user', userGetAll);
 router.use('/user', userGetByPk);
+router.use('/user', userUpdate);
 
 
 module.exports = router;
