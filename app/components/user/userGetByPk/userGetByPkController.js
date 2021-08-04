@@ -1,18 +1,18 @@
 const httpStatus = require('http-status');
-const Product = require('./productGetByPk');
+const User = require('./userGetByPk');
 
-const getProductById = async(req,res) => {
+const getUserById = async(req,res) => {
     const {id} = req.params;
     try {
-        const product = await Product.getProductById(id);
-        if(!product){
+        const user = await User.getUserById(id);
+        if(!user){
             return res
                 .status(httpStatus.NOT_FOUND)
-                .send({ message: 'No se encontro el producto' });
+                .send({ message: 'No se encontro el usuario' });
         }else{
             return res
             .status(httpStatus.OK)
-            .send(product);
+            .send(user);
         }
     } catch (error) {
         return res
@@ -21,4 +21,4 @@ const getProductById = async(req,res) => {
     }
 };
 
-module.exports = {getProductById};
+module.exports = {getUserById};
