@@ -1,9 +1,9 @@
 const {Router} = require('express');
-const controllerGetAll = require('./productGetAllControler');
+const controllerGetAll = require('./userGetAllControler');
 
 const routerDelete = new Router();
 
 routerDelete.route('/')
-    .get(controllerGetAll.getProducts);
+    .get(controllerGetAll.getUsers);
 
 module.exports = routerDelete;

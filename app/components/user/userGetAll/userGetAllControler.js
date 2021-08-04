@@ -1,12 +1,12 @@
 const httpStatus = require('http-status');
-const Product = require('./productGetAll');
+const User = require('./userGetAll');
 
-const getProducts = async(req,res) => {
+const getUsers = async(req,res) => {
     try {
-        const products = await Product.getProducts();
+        const users = await User.getUsers();
         return res
             .status(httpStatus.OK)
-            .send(products);
+            .send(users);
     } catch (error) {
         return res
             .status(httpStatus.INTERNAL_SERVER_ERROR)
@@ -14,4 +14,4 @@ const getProducts = async(req,res) => {
     }
 };
 
-module.exports = {getProducts};
+module.exports = {getUsers};

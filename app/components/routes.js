@@ -8,6 +8,7 @@ const productsGetByCategory = require('./product/productGetByCategory/productGet
 const productsUpdate = require('./product/productUpdate/productUpdateRouter');
 
 const userCreate = require('./user/userCreate/userCreateRouter');
+const userGetAll = require('./user/userGetAll/userGetAllRouter');
 
 router.use('/products', productsCreate);
 router.use('/products', productsDelete);
@@ -17,6 +18,7 @@ router.use('/products', productsGetByCategory);
 router.use('/products', productsUpdate);
 
 router.use('/user', userCreate);
+router.use('/user', userGetAll);
 
 
 module.exports = router;
