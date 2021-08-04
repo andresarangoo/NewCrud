@@ -1,18 +1,18 @@
 const httpStatus = require('http-status');
-const Product = require('./productDelete');
+const User = require('./userDelete');
 
-const deleteProduct = async(req,res) => {
+const deleteUser = async(req,res) => {
     const {id} = req.params;
     try {
-        const productWasDelete = await Product.deleteProduct(id);
-        if (productWasDelete){
+        const userWasDelete = await User.deleteUser(id);
+        if (userWasDelete){
             return res
                 .status(httpStatus.OK)
                 .send({message: 'Se elimino el registro'});
         } else{
             return res
                 .status(httpStatus.OK)
-                .send({message: 'El producto buscado no existe'});
+                .send({message: 'El usuario buscado no existe'});
         }
     } catch (error) {
         return res
@@ -21,4 +21,4 @@ const deleteProduct = async(req,res) => {
     }
 };
 
-module.exports = {deleteProduct};
+module.exports = {deleteUser};

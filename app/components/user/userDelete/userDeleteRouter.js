@@ -1,9 +1,9 @@
 const {Router} = require('express');
-const controllerDelete = require('./productDeleteController');
+const controllerDelete = require('./userDeleteController');
 
 const routerDelete = new Router();
 
 routerDelete.route('/:id')
-    .delete(controllerDelete.deleteProduct);
+    .delete(controllerDelete.deleteUser);
 
 module.exports = routerDelete;

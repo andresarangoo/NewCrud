@@ -1,5 +1,6 @@
 const {Router} = require('express');
 const router = new Router();
+
 const productsCreate = require('./product/productCreate/productCreateRouter');
 const productsDelete = require('./product/productDelete/productDeleteRouter');
 const productsGetAll = require('./product/productGetAll/productGetAllRouter');
@@ -11,6 +12,7 @@ const userCreate = require('./user/userCreate/userCreateRouter');
 const userGetAll = require('./user/userGetAll/userGetAllRouter');
 const userGetByPk = require('./user/userGetByPk/userGetByPkRouter');
 const userUpdate = require('./user/userUpdate/userUpdateRouter');
+const userDelete = require('./user/userDelete/userDeleteRouter');
 
 router.use('/products', productsCreate);
 router.use('/products', productsDelete);
@@ -23,6 +25,6 @@ router.use('/user', userCreate);
 router.use('/user', userGetAll);
 router.use('/user', userGetByPk);
 router.use('/user', userUpdate);
-
+router.use('/user', userDelete);
 
 module.exports = router;
