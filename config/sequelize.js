@@ -1,5 +1,5 @@
 const {Sequelize} = require('sequelize');
-require('dotenv').config({path:'./.env'});
+require('dotenv').config({path:'./.env'}); //no es necesario en el lambda
 
 const host = process.env.HOST || '127.0.0.1';
 const user = process.env.USER || 'root';
